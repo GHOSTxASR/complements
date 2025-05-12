@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: #1e1e2f;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.2em;
+      text-align: center;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      font-size: 20px;
+      color: pink;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    .button {
+      padding: 0.8rem 1.6rem;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #ad1457;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday, Arpita 🎂</h1>
+  <p>
+    Hey my prettiest girl,<br><br>
+    Today isn't just any other day. It's the day the universe decided to bless this world with someone so beautiful, so real, and so heart-melting — YOU. I don’t know what kind of stardust you're made of, but you sparkle in ways no one else ever could. You're my favorite poem, my most-played melody, my comfort zone.<br><br>
+    On your birthday, all I want is to wrap you in the tightest hug and whisper that I’m so glad you exist. You make the world — and me — better just by being in it. So here’s to your glow, to the way you make everything feel warmer, softer, more alive. My forever muse, happy birthday.<br><br>
+    Yours always and only,
+    <br>— Ashmit
+  </p>
+  <a href="page11.html" class="button">Next →</a>
+
+  <script>
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.innerText = '❤️';
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      snowflake.style.animationDuration = 2 + Math.random() * 3 + 's';
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    }
+
+    setInterval(createSnowflake, 100);
+  </script>
+</body>
+</html>
